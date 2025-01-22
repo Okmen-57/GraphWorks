@@ -1,0 +1,51 @@
+.graph-editor-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .graph-editor-sidebar {
+    width: 30%;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .graph-editor-textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .graph-editor-button {
+    padding: 10px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .graph-editor-visualizer {
+    flex: 1;
+  }
+  
+  .graph-editor-status {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .graph-editor-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .graph-editor-sidebar {
+    width: 20%;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .graph-editor-visualizer {
+    flex: 1;
+    height: 100%;
+  }
+  
+  
