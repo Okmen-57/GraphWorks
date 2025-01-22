@@ -10,19 +10,19 @@ export class Graph {
   }
 
   addNode(node: string): void {
-    if (!node) return; // Ignore empty nodes
+    if (!node) return;
     if (!this.adjacencyList[node]) {
       this.adjacencyList[node] = new Set();
     }
   }
 
   addEdge(node1: string, node2: string): void {
-    if (!node1 || !node2) return; // Ignore invalid edges
-    if (node1 === node2) return; // Prevent self-loops
+    if (!node1 || !node2) return;
+    if (node1 === node2) return;
     this.addNode(node1);
     this.addNode(node2);
     this.adjacencyList[node1].add(node2);
-    this.adjacencyList[node2].add(node1); // For undirected graphs
+    this.adjacencyList[node2].add(node1);
   }
 
   clear(): void {
@@ -33,12 +33,10 @@ export class Graph {
     return this.adjacencyList;
   }
 
-  // Delegate isBipartite functionality to the external algorithm
   isBipartite(): boolean {
     return isBipartite(this);
   }
 
-  // Delegate isEulerian functionality to the external algorithm
   isEulerian(): { type: 'Circuit' | 'Path' | 'None'; explanation: string } {
     return isEulerian(this);
   }
